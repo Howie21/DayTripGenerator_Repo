@@ -16,6 +16,8 @@ def get_random_selection(List_name):
     value = random.choice(List_name)
     return value
 
+
+
 def generate_trip():
     name = input("What is your Full Name?")
     email = input("Whats your email?")
@@ -24,13 +26,6 @@ def generate_trip():
     t = get_random_selection(mode_of_transportation)
     e = get_random_selection(entertainment_list)
     intial_prompt = input(f"{name.title()}, You will be going to {d} by {t}. You will dine at {r} and enjoy {e} for your end of day entertainment! To Confirm please type 'Confirm', to restart type 'Restart': ")
-    while intial_prompt.upper() != "CONFIRM" or intial_prompt.upper() != "RESTART":
-        if intial_prompt.upper() == "CONFIRM":
-            break
-        elif intial_prompt.upper() == "RESTART":
-            break
-        else:
-            intial_prompt = input(f"Not a valid input. Please try again!: ('Confirm' or 'Restart')")
     while intial_prompt.upper() == "CONFIRM" or intial_prompt.upper() == "RESTART":
         if intial_prompt.upper() == "CONFIRM":
             print(f"Congratulations {name.title()}, all reservations have been made. Tickets and reservation times will be sent to your email provided: {email} Thank you!")
