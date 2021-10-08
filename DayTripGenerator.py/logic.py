@@ -14,7 +14,13 @@ def get_random_selection(List_name):
     return value
 
 def get_confirm(entertainment, restaurant, destination, transportation, name, email): 
-    intial_prompt = input(f'{entertainment}')
+    print(f'{destination} was selected as your destination, to change this, enter 1')
+    print(f'{restaurant} was selected as your restaurant, to change this enter 2')
+    print(f'{transportation} was selected as your transportation, to change this enter 3')
+    print(f'{entertainment} was selected as your evening entertainment, to change this, enter 4')
+    print()
+    print('If you like all the choices, enter "Confirm". Otherwise, reference above and enter the number of the item you wish to change')
+    intial_prompt = input(f'Please enter "Confirm", 1, 2, 3 or 4.')
     while intial_prompt.upper() != "CONFIRM":
         if intial_prompt.upper() == "CONFIRM":
             break
